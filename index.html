@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+        margin: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 400px;
+    }
+    label {
+        font-weight: bold;
+    }
+    button {
+        padding: 8px 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+  <div id="container">
+    <form id="addReserve">
+    <label for="firstTokenAmount">Input first token amount</label>
+    <input type="number" id="firstTokenAmount" placeholder="First token amount">
+    <label for="secondTokenAmount">Input second token amount</label>
+    <input type="number" id="secondTokenAmount" placeholder="Second token amount">
+    <button>Add tokens to reserve</button>
+    </form> 
+  </div>
+  <div id="container">
+    <form id="swapForm">
+    <label for="swapAmount">Input amount tokens to swap</label>
+    <input type="number" id="swapAmount">
+    <label for="isTokenA">Is this first token?</label>
+    <input type="checbox" id="isTokenA">
+    <button type="submit"></button>
+    </form>
+  </div>
+
+  <div id="container">
+    <form>
+      <input>
+      <input>
+      <button></button>
+    </form>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

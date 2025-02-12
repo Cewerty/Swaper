@@ -6,16 +6,18 @@
   <title>Document</title>
   <style>
     .container {
-        margin: 20px;
+        margin: 30px;
         padding: 15px;
         border: 1px solid #ddd;
         border-radius: 8px;
+        flex-direction: column;
     }
     form {
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column; 
         gap: 10px;
         max-width: 400px;
+        padding: 20px;
     }
     label {
         font-weight: bold;
@@ -32,31 +34,39 @@
 </head>
 <body>
   <div id="container">
+    <p>Swaper tokenA balance: <b><span id="tokenAReserve"></span></b></p>
+    <p>Swaper tokenB balance: <b><span id="tokenBReserve"></span></b></p>
+
+    <p>User tokenA balance: <b><span id="tokenABalance"></span></b></p>
+    <p>User tokenB balance: <b><span id="tokenBBalance"></span></b></p>
+  </div>
+  <div id="container">
     <form id="addReserve">
     <label for="firstTokenAmount">Input first token amount</label>
     <input type="number" id="firstTokenAmount" placeholder="First token amount">
     <label for="secondTokenAmount">Input second token amount</label>
     <input type="number" id="secondTokenAmount" placeholder="Second token amount">
-    <button>Add tokens to reserve</button>
+    <button type="submit">Add tokens to reserve</button>
     </form> 
   </div>
   <div id="container">
     <form id="swapForm">
     <label for="swapAmount">Input amount tokens to swap</label>
-    <input type="number" id="swapAmount">
+    <input type="number" id="swapAmount" placeholder="Token amount">
     <label for="isTokenA">Is this first token?</label>
-    <input type="checbox" id="isTokenA">
-    <button type="submit"></button>
+    <input type="checkbox" id="isTokenA">
+    <button type="submit">Swap tokens</button>
     </form>
   </div>
-
   <div id="container">
-    <form>
-      <input>
-      <input>
-      <button></button>
+    <form id='buyToken'>
+      <label for='tokenAmount'>Token amount: </label>
+      <input type="number" id='tokenAmount' placeholder="Input amount for tokens you want to buy">
+      <label for="isTokenAToBuy">Is this tokenA?</label>
+      <input type="checkbox" id="isTokenAToBuy">
+      <button type='submit'>Buy tokens</button>
     </form>
   </div>
-  <script type="module" src="./src/main.js"></script>
+  <script type="module" src="./src/main.js" defer></script>
 </body>
 </html>
